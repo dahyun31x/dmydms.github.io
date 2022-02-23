@@ -2,5 +2,5 @@
 authors = ["dmydms"]
 language = "ko"
 multilingual = false
-src = ""
+src = "/dev-blog"
 title = "Dahyun's dev blog 🛠"

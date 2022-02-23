@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="ko" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2021-10-14 - Dahyun&#x27;s dev blog 🛠</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Dahyun Kim</a></li><li class="chapter-item expanded "><a href="../django/django.html"><strong aria-hidden="true">1.</strong> Django</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/00_install.html"><strong aria-hidden="true">1.1.</strong> install</a></li><li class="chapter-item expanded "><a href="../django/01_requests_and_responses.html"><strong aria-hidden="true">1.2.</strong> Requests and responses</a></li><li class="chapter-item expanded "><a href="../django/02_models_and_the_admin_site.html"><strong aria-hidden="true">1.3.</strong> Models and the admin site</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/6392e4ae47e2e1e032e96fd7439b2dc85786d658.html"><strong aria-hidden="true">1.4.</strong> Views and templates</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/ca6dfbdd7a0ad82e30a5eaae03ad0ba552dc95ef.html"><strong aria-hidden="true">1.5.</strong> Forms and generic views</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/e7e22eaf0d44ca412a5414745175bcf004b98cd9.html"><strong aria-hidden="true">1.6.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/bb28b5213a1326e271c65073f4cc258c494b791e.html"><strong aria-hidden="true">1.7.</strong> Static files</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/a82190a0a5603aa164768d43af621d050aeadace.html"><strong aria-hidden="true">1.8.</strong> Customizing the admin site</a></li></ol></li><li class="chapter-item expanded "><a href="../svelte/svelte.html"><strong aria-hidden="true">2.</strong> Svelte</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../svelte/lifecycle.html"><strong aria-hidden="true">2.1.</strong> Lifecycle</a></li></ol></li><li class="chapter-item expanded "><a href="../til/til.html"><strong aria-hidden="true">3.</strong> TIL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../til/2020-09-17.html"><strong aria-hidden="true">3.1.</strong> 2020-09-17</a></li><li class="chapter-item expanded "><a href="../til/2020-09-18.html"><strong aria-hidden="true">3.2.</strong> 2020-09-18</a></li><li class="chapter-item expanded "><a href="../til/2020-09-22.html"><strong aria-hidden="true">3.3.</strong> 2020-09-22</a></li><li class="chapter-item expanded "><a href="../til/2021-07-09.html"><strong aria-hidden="true">3.4.</strong> 2021-07-09</a></li><li class="chapter-item expanded "><a href="../til/2021-07-15.html"><strong aria-hidden="true">3.5.</strong> 2021-07-15</a></li><li class="chapter-item expanded "><a href="../til/2021-07-16.html"><strong aria-hidden="true">3.6.</strong> 2021-07-16</a></li><li class="chapter-item expanded "><a href="../til/2021-07-17.html"><strong aria-hidden="true">3.7.</strong> 2021-07-17</a></li><li class="chapter-item expanded "><a href="../til/2021-07-25.html"><strong aria-hidden="true">3.8.</strong> 2021-07-25</a></li><li class="chapter-item expanded "><a href="../til/2021-08-05.html"><strong aria-hidden="true">3.9.</strong> 2021-08-05</a></li><li class="chapter-item expanded "><a href="../til/2021-08-06.html"><strong aria-hidden="true">3.10.</strong> 2021-08-06</a></li><li class="chapter-item expanded "><a href="../til/2021-08-07.html"><strong aria-hidden="true">3.11.</strong> 2021-08-07</a></li><li class="chapter-item expanded "><a href="../til/2021-08-09.html"><strong aria-hidden="true">3.12.</strong> 2021-08-09</a></li><li class="chapter-item expanded "><a href="../til/2021-08-10.html"><strong aria-hidden="true">3.13.</strong> 2021-08-10</a></li><li class="chapter-item expanded "><a href="../til/2021-08-17.html"><strong aria-hidden="true">3.14.</strong> 2021-08-17</a></li><li class="chapter-item expanded "><a href="../til/2021-08-26.html"><strong aria-hidden="true">3.15.</strong> 2021-08-26</a></li><li class="chapter-item expanded "><a href="../til/2021-09-09.html"><strong aria-hidden="true">3.16.</strong> 2021-09-09</a></li><li class="chapter-item expanded "><a href="../til/2021-09-20.html"><strong aria-hidden="true">3.17.</strong> 2021-09-20</a></li><li class="chapter-item expanded "><a href="../til/2021-09-21.html"><strong aria-hidden="true">3.18.</strong> 2021-09-21</a></li><li class="chapter-item expanded "><a href="../til/2021-09-27.html"><strong aria-hidden="true">3.19.</strong> 2021-09-27</a></li><li class="chapter-item expanded "><a href="../til/2021-09-28.html"><strong aria-hidden="true">3.20.</strong> 2021-09-28</a></li><li class="chapter-item expanded "><a href="../til/2021-10-12.html"><strong aria-hidden="true">3.21.</strong> 2021-10-12</a></li><li class="chapter-item expanded "><a href="../til/2021-10-13.html"><strong aria-hidden="true">3.22.</strong> 2021-10-13</a></li><li class="chapter-item expanded "><a href="../til/2021-10-14.html" class="active"><strong aria-hidden="true">3.23.</strong> 2021-10-14</a></li><li class="chapter-item expanded "><a href="../til/2021-10-16.html"><strong aria-hidden="true">3.24.</strong> 2021-10-16</a></li><li class="chapter-item expanded "><a href="../til/2021-10-19.html"><strong aria-hidden="true">3.25.</strong> 2021-10-19</a></li><li class="chapter-item expanded "><a href="../til/2021-10-22.html"><strong aria-hidden="true">3.26.</strong> 2021-10-22</a></li><li class="chapter-item expanded "><a href="../til/2021-10-26.html"><strong aria-hidden="true">3.27.</strong> 2021-10-26</a></li><li class="chapter-item expanded "><a href="../til/2021-10-28.html"><strong aria-hidden="true">3.28.</strong> 2021-10-28</a></li><li class="chapter-item expanded "><a href="../til/2021-11-01.html"><strong aria-hidden="true">3.29.</strong> 2021-11-01</a></li><li class="chapter-item expanded "><a href="../til/2021-11-03.html"><strong aria-hidden="true">3.30.</strong> 2021-11-03</a></li><li class="chapter-item expanded "><a href="../til/2021-11-22.html"><strong aria-hidden="true">3.31.</strong> 2021-11-22</a></li><li class="chapter-item expanded "><a href="../til/2021-11-23.html"><strong aria-hidden="true">3.32.</strong> 2021-11-23</a></li><li class="chapter-item expanded "><a href="../til/2021-11-26.html"><strong aria-hidden="true">3.33.</strong> 2021-11-26</a></li><li class="chapter-item expanded "><a href="../til/2021-12-03.html"><strong aria-hidden="true">3.34.</strong> 2021-12-03</a></li><li class="chapter-item expanded "><a href="../til/2021-12-04.html"><strong aria-hidden="true">3.35.</strong> 2021-12-04</a></li><li class="chapter-item expanded "><a href="../til/2022-01-03.html"><strong aria-hidden="true">3.36.</strong> 2022-01-03</a></li><li class="chapter-item expanded "><a href="../til/2022-02-22.html"><strong aria-hidden="true">3.37.</strong> 2022-02-22</a></li><li class="chapter-item expanded "><a href="../til/2022-02-03.html"><strong aria-hidden="true">3.38.</strong> 2022-02-03</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Dahyun&#x27;s dev blog 🛠</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="2021-10-14-til"><a class="header" href="#2021-10-14-til">2021-10-14 TIL</a></h1>
+<h2 id="오늘-어디에-도전해보셨고-무엇을-배우셨나요"><a class="header" href="#오늘-어디에-도전해보셨고-무엇을-배우셨나요">오늘 어디에 도전해보셨고, 무엇을 배우셨나요?</a></h2>
+<h3 id="도전"><a class="header" href="#도전">도전</a></h3>
+<ol>
+<li>프론트엔드, 백엔드 기초 지식 쌓기. </li>
+<li>(진행 중) csv 시트를 파싱하고, 여러 시트를 외래키로 이어 붙여서 하나의 시트 만들기. </li>
+</ol>
+<h3 id="배운-점"><a class="header" href="#배운-점">배운 점</a></h3>
+<h4 id="1-프론트엔드-백엔드-기초-지식-쌓기"><a class="header" href="#1-프론트엔드-백엔드-기초-지식-쌓기">1. 프론트엔드, 백엔드 기초 지식 쌓기.</a></h4>
+<p><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">Technical Interview Guidelines for Beginners</a>의 프론트엔드와 백엔드 기초지식 일부를 읽었음.</p>
+<p><strong>자바스크립트를 해석하고 실행시키는 엔진</strong></p>
+<ul>
+<li>javascript를 해석하는 javascript engine과 웹 브라우저에 화면을 그리는 rendering engine(layout engine)은 다름. </li>
+<li><strong>Rendering Engine (layout engine)</strong>
+: HTML과 CSS로 작성된 마크업 관련 코드들을 콘텐츠로서 웹 페이지에 'rendering'하는 역할</li>
+<li><strong>JavaScript Engine</strong>
+: JavaScript로 작성한 코드를 해석하고 실행하는 <strong>인터프리터.</strong> 주로 웹 프라우저에서 이용되지만 최근에는 node.js가 등장하면서 server side에서는 <strong>V8</strong>과 같은 Engine이 이용됨. 
+구글에서 개발한 V8을 비롯한 대부분의 JavaScript Engine은 크게 세 영역으로 나뉨.
+<ul>
+<li>Call Stack
+<ul>
+<li>단 하나의 call stack 사용</li>
+<li>Run to Completion
+: 하나의 함수가 실행되면 이 함수의 실행이 끝날 때까지 다른 어떤 task도 수행될 수 없다는 의미. 요청이 들어올 때마다 해당 요청을 순차적으로 호출 스택에 담아 처리.</li>
+</ul>
+</li>
+<li>Task Queue (Event queue)
+<ul>
+<li>자바스크립트의 런타임 환경에서는 처리해야하는 Task들을 임시 저장하는 대기 큐가 존재. Call stack이 비었을 때 먼저 대기열에 들어온 순서대로 수행.</li>
+</ul>
+</li>
+<li>Heap
+<ul>
+<li>동적으로 생성된 객체는 힙에 할당됨.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hoisting</strong></p>
+<ul>
+<li>
+<p>변수의 정의가 그 범위에 따라 선언과 할당으로 분리되는 것을 의미.</p>
+</li>
+<li>
+<p>변수가 함수 내에서 정의되었을 경우, 선언이 함수의 최상위로, 함수 바깥에서 정의되었을 경우, 전역 컨텍스트의 최상위로 변경됨. </p>
+</li>
+<li>
+<p>선언문은 자바스크립트 엔진 구동시 가장 최우선으로 해석되며, 할당 구문은 런타임 과정에서 이루어지기 때문에 호이스팅 되지 않음.</p>
+</li>
+<li>
+<p>선언과 할당</p>
+</li>
+</ul>
+<pre><code class="language-javascript">function getX() {
+  console.log(x); // undefined
+  var x = 100;
+  console.log(x); // 100
+}
+getX();
+
+function getX() {
+  var x;
+  console.log(x); // undefined
+  x = 100;
+  console.log(x); // 100
+}
+getX();
+</code></pre>
+<p><strong>Closure</strong></p>
+<ul>
+<li>외부 함수 호출이 종료되더라도 외부함수의 지역 변수 및 변수 스코프 객체의 체인관계를 유지할 수 있는 구조를 클로저라고 함. 외부 함수에 의해 반환되는 내부함수를 가리키는 말 </li>
+</ul>
+<pre><code class="language-javascript">let name = `Warning`;
+function outer() {
+  let name = `closure`;
+  return function inner() {
+    console.log(name);
+  };
+}
+
+let callFunc = outer();
+callFunc();
+// console&gt; closure
+</code></pre>
+<p><strong>Promise</strong></p>
+<p>콜백이 중첩되는 경우가 발생했고, 이를 해결할 방안으로 등장한 것이 Promise 패턴. 비동기 작업들을 순차적으로 진행하거나 병렬로 진행하는 등의 컨트롤이 수월해짐. 예외 처리에 대한 구조가 존재하기 때문에 오류 처리 등에 대해 보다 가시적으로 관리할 수 있음.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">공식문서</a> 읽어보기 <!-- TODO: 공식 문서 읽어보기 --></li>
+</ul>
+<h4 id="2-csv-시트를-파싱하고-여러-시트를-외래키로-이어-붙여서-하나의-시트-만들기"><a class="header" href="#2-csv-시트를-파싱하고-여러-시트를-외래키로-이어-붙여서-하나의-시트-만들기">2. csv 시트를 파싱하고, 여러 시트를 외래키로 이어 붙여서 하나의 시트 만들기.</a></h4>
+<ul>
+<li>
+<p>makefile을 이용해서 <code>.xlsx</code> 파일을 <code>.csv</code>로 변환하고 칼럼 이름의 공백을 모두 제거하는 스크립트 작성. </p>
+</li>
+<li>
+<p><code>make filename.csv</code> 명령어를 입력하면 csv가 만들어지게끔 스크립트 작성. </p>
+</li>
+<li>
+<p><a href="https://csvkit.readthedocs.io/en/1.0.2/scripts/in2csv.html">in2csv</a>: 다양한 표 형태의 데이터 형식을 CSV로 변환하는 csvkit의 명령어</p>
+<pre><code class="language-makefile">filname.csv: raw.xlsx
+    in2csv raw.xlsx 3&gt; /blah | tail -n +1 &gt; raw.csv
+    gsed -i '1 s/\s//g' raw.csv
+</code></pre>
+</li>
+<li>
+<p>위 명령어에서 원래 <code>sed</code> 명령어를 사용했으나, 아래와 같은 에러가 발생함</p>
+<blockquote>
+<p>sed: 1: &quot;fskfcdb/raw.csv&quot;: invalid command code f</p>
+</blockquote>
+<p>Mac에 설치된 sed가 리눅스의 sed와 다르게 작동하기 때문에 생긴 문제였으며, <code>brew install gnu-sed</code>로 GNU 버전을 설치하면 잘 작동함.</p>
+</li>
+</ul>
+<h2 id="학습하시면서-궁금하신-부분이나-어려웠던-점은-뭘까요"><a class="header" href="#학습하시면서-궁금하신-부분이나-어려웠던-점은-뭘까요">학습하시면서 궁금하신 부분이나, 어려웠던 점은 뭘까요?</a></h2>
+<p>위 makefile 명령어에서, <!-- TODO: 질문하기 --></p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+3&gt; 이렇게 하면 어떻게 되는지?</li>
+<li><input disabled="" type="checkbox" checked=""/>
+/blah는 어떤 디렉토리?</li>
+<li><input disabled="" type="checkbox" checked=""/>
+<code>|</code>  파이프?였던 것 같은데 어떤 명령어인지 찾고, 다시 공부하기</li>
+<li><input disabled="" type="checkbox" checked=""/>
+tail -n +1 의 뜻? </li>
+<li><input disabled="" type="checkbox" checked=""/>
+정규표현식 <code>'1 s/\s//g'</code> 의미가 무엇인지?</li>
+<li><input disabled="" type="checkbox" checked=""/>
+gsed와 sed 차이는?</li>
+<li><input disabled="" type="checkbox" checked=""/>
+gsed 명령어의 i 속성은?</li>
+</ul>
+<h2 id="내일은-어떻게-해보고-싶으세요"><a class="header" href="#내일은-어떻게-해보고-싶으세요">내일은 어떻게 해보고 싶으세요?</a></h2>
+<ul>
+<li>퇴근하고 정리하는 시간을 많이 들이지 않도록 업무하면서 중간중간 읽기 쉽게 정돈해서 작성하기 </li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../til/2021-10-13.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../til/2021-10-16.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../til/2021-10-13.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../til/2021-10-16.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

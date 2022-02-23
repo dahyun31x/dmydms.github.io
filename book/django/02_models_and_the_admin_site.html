@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="ko" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2. Models and the admin site - Dahyun&#x27;s dev blog 🛠</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Dahyun Kim</a></li><li class="chapter-item expanded "><a href="../django/django.html"><strong aria-hidden="true">1.</strong> Django</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/00_install.html"><strong aria-hidden="true">1.1.</strong> install</a></li><li class="chapter-item expanded "><a href="../django/01_requests_and_responses.html"><strong aria-hidden="true">1.2.</strong> Requests and responses</a></li><li class="chapter-item expanded "><a href="../django/02_models_and_the_admin_site.html" class="active"><strong aria-hidden="true">1.3.</strong> Models and the admin site</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/6392e4ae47e2e1e032e96fd7439b2dc85786d658.html"><strong aria-hidden="true">1.4.</strong> Views and templates</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/ca6dfbdd7a0ad82e30a5eaae03ad0ba552dc95ef.html"><strong aria-hidden="true">1.5.</strong> Forms and generic views</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/e7e22eaf0d44ca412a5414745175bcf004b98cd9.html"><strong aria-hidden="true">1.6.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/bb28b5213a1326e271c65073f4cc258c494b791e.html"><strong aria-hidden="true">1.7.</strong> Static files</a></li><li class="chapter-item expanded "><a href="../https://github.com/dmydms/study/commit/a82190a0a5603aa164768d43af621d050aeadace.html"><strong aria-hidden="true">1.8.</strong> Customizing the admin site</a></li></ol></li><li class="chapter-item expanded "><a href="../svelte/svelte.html"><strong aria-hidden="true">2.</strong> Svelte</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../svelte/lifecycle.html"><strong aria-hidden="true">2.1.</strong> Lifecycle</a></li></ol></li><li class="chapter-item expanded "><a href="../til/til.html"><strong aria-hidden="true">3.</strong> TIL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../til/2020-09-17.html"><strong aria-hidden="true">3.1.</strong> 2020-09-17</a></li><li class="chapter-item expanded "><a href="../til/2020-09-18.html"><strong aria-hidden="true">3.2.</strong> 2020-09-18</a></li><li class="chapter-item expanded "><a href="../til/2020-09-22.html"><strong aria-hidden="true">3.3.</strong> 2020-09-22</a></li><li class="chapter-item expanded "><a href="../til/2021-07-09.html"><strong aria-hidden="true">3.4.</strong> 2021-07-09</a></li><li class="chapter-item expanded "><a href="../til/2021-07-15.html"><strong aria-hidden="true">3.5.</strong> 2021-07-15</a></li><li class="chapter-item expanded "><a href="../til/2021-07-16.html"><strong aria-hidden="true">3.6.</strong> 2021-07-16</a></li><li class="chapter-item expanded "><a href="../til/2021-07-17.html"><strong aria-hidden="true">3.7.</strong> 2021-07-17</a></li><li class="chapter-item expanded "><a href="../til/2021-07-25.html"><strong aria-hidden="true">3.8.</strong> 2021-07-25</a></li><li class="chapter-item expanded "><a href="../til/2021-08-05.html"><strong aria-hidden="true">3.9.</strong> 2021-08-05</a></li><li class="chapter-item expanded "><a href="../til/2021-08-06.html"><strong aria-hidden="true">3.10.</strong> 2021-08-06</a></li><li class="chapter-item expanded "><a href="../til/2021-08-07.html"><strong aria-hidden="true">3.11.</strong> 2021-08-07</a></li><li class="chapter-item expanded "><a href="../til/2021-08-09.html"><strong aria-hidden="true">3.12.</strong> 2021-08-09</a></li><li class="chapter-item expanded "><a href="../til/2021-08-10.html"><strong aria-hidden="true">3.13.</strong> 2021-08-10</a></li><li class="chapter-item expanded "><a href="../til/2021-08-17.html"><strong aria-hidden="true">3.14.</strong> 2021-08-17</a></li><li class="chapter-item expanded "><a href="../til/2021-08-26.html"><strong aria-hidden="true">3.15.</strong> 2021-08-26</a></li><li class="chapter-item expanded "><a href="../til/2021-09-09.html"><strong aria-hidden="true">3.16.</strong> 2021-09-09</a></li><li class="chapter-item expanded "><a href="../til/2021-09-20.html"><strong aria-hidden="true">3.17.</strong> 2021-09-20</a></li><li class="chapter-item expanded "><a href="../til/2021-09-21.html"><strong aria-hidden="true">3.18.</strong> 2021-09-21</a></li><li class="chapter-item expanded "><a href="../til/2021-09-27.html"><strong aria-hidden="true">3.19.</strong> 2021-09-27</a></li><li class="chapter-item expanded "><a href="../til/2021-09-28.html"><strong aria-hidden="true">3.20.</strong> 2021-09-28</a></li><li class="chapter-item expanded "><a href="../til/2021-10-12.html"><strong aria-hidden="true">3.21.</strong> 2021-10-12</a></li><li class="chapter-item expanded "><a href="../til/2021-10-13.html"><strong aria-hidden="true">3.22.</strong> 2021-10-13</a></li><li class="chapter-item expanded "><a href="../til/2021-10-14.html"><strong aria-hidden="true">3.23.</strong> 2021-10-14</a></li><li class="chapter-item expanded "><a href="../til/2021-10-16.html"><strong aria-hidden="true">3.24.</strong> 2021-10-16</a></li><li class="chapter-item expanded "><a href="../til/2021-10-19.html"><strong aria-hidden="true">3.25.</strong> 2021-10-19</a></li><li class="chapter-item expanded "><a href="../til/2021-10-22.html"><strong aria-hidden="true">3.26.</strong> 2021-10-22</a></li><li class="chapter-item expanded "><a href="../til/2021-10-26.html"><strong aria-hidden="true">3.27.</strong> 2021-10-26</a></li><li class="chapter-item expanded "><a href="../til/2021-10-28.html"><strong aria-hidden="true">3.28.</strong> 2021-10-28</a></li><li class="chapter-item expanded "><a href="../til/2021-11-01.html"><strong aria-hidden="true">3.29.</strong> 2021-11-01</a></li><li class="chapter-item expanded "><a href="../til/2021-11-03.html"><strong aria-hidden="true">3.30.</strong> 2021-11-03</a></li><li class="chapter-item expanded "><a href="../til/2021-11-22.html"><strong aria-hidden="true">3.31.</strong> 2021-11-22</a></li><li class="chapter-item expanded "><a href="../til/2021-11-23.html"><strong aria-hidden="true">3.32.</strong> 2021-11-23</a></li><li class="chapter-item expanded "><a href="../til/2021-11-26.html"><strong aria-hidden="true">3.33.</strong> 2021-11-26</a></li><li class="chapter-item expanded "><a href="../til/2021-12-03.html"><strong aria-hidden="true">3.34.</strong> 2021-12-03</a></li><li class="chapter-item expanded "><a href="../til/2021-12-04.html"><strong aria-hidden="true">3.35.</strong> 2021-12-04</a></li><li class="chapter-item expanded "><a href="../til/2022-01-03.html"><strong aria-hidden="true">3.36.</strong> 2022-01-03</a></li><li class="chapter-item expanded "><a href="../til/2022-02-22.html"><strong aria-hidden="true">3.37.</strong> 2022-02-22</a></li><li class="chapter-item expanded "><a href="../til/2022-02-03.html"><strong aria-hidden="true">3.38.</strong> 2022-02-03</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Dahyun&#x27;s dev blog 🛠</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="writing-your-first-django-app-part-2"><a class="header" href="#writing-your-first-django-app-part-2"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/">Writing your first Django app, part 2</a></a></h1>
+<h2 id="database-setup"><a class="header" href="#database-setup"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#database-setup">Database setup</a></a></h2>
+<ul>
+<li>Django 설정들을 보여주는 module-level 변수들을 담고있는 <code>mysite/settings.py</code> 열기</li>
+<li>default로 SQLite 설정을 사용하며, SQLite는 Python에 포함되어 있기 때문에, 설치가 필요 없으며 가장 쉬운 방법. 하지만 PostgreSQL 같은 확장 가능한 DB를 사용해 DB 전환 문제를 피할 수 있음.</li>
+<li>다른 DB를 사용하고 싶다면 적절한 <a href="https://docs.djangoproject.com/en/4.0/topics/install/#database-installation">database bindings</a>을 사용하고 <a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DATABASES">DATABASES</a> 'default' 아이템에 있는 다음 키들을 선택한 database 연결 settings에 맞추기.
+<ul>
+<li><code>ENGINE</code>:
+<ul>
+<li>'django.db.backends.postgresql'</li>
+<li>'django.db.backends.sqlite3'</li>
+<li>다른 DB 옵션은 공식 문서 참조.</li>
+</ul>
+</li>
+<li><code>NAME</code>: database의 이름. SQLite를 쓰면 이 이름의 파일이 생성됨. (SQLite 내용이라 생략)</li>
+<li>SQLite 이외의 DB를 사용할거라면, USER, PASSWORD 그리고 HOST가 추가되어야하며 자세한 내용은 <a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-DATABASES">DATABASES</a> 참고.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>cf. SQLite가 아닌 database를 사용하는 경우.</p>
+<ul>
+<li>SQLite가 아닌 database를 사용한다면, 이 시점에서 <code>CREATE DATABASE database_name</code>을 이용해서 DB를 생성.</li>
+<li><code>mysite/settings.py</code>에 작성되는 DB 유저는 &quot;create database&quot; 권한이 있어야함. 권한이 있어야만, 이후 튜토리얼에서 필요한 <a href="https://docs.djangoproject.com/en/4.0/topics/testing/overview/#the-test-database">test database</a> 자동 생성이 허용됨.</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><code>mysite/settings.py</code>의 <a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-TIME_ZONE">TIME_ZONE</a>을 변경하기. </p>
+<blockquote>
+<p>이해 중 🤔<br />
+powered sites, each with a separate time zone setting.</p>
+<p>When USE_TZ is False, this is the time zone in which Django will store all datetimes. When USE_TZ is True, this is the default time zone that Django will use to display datetimes in templates and to interpret datetimes entered in forms.</p>
+</blockquote>
+<ul>
+<li>
+<pre><code class="language-python">TIME_ZONE = 'Asia/Seoul'
+USE_TZ = False
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-INSTALLED_APPS"><code>INSTALLED_APPS</code></a> 는 settings.py의 상단에 있는 설정으로 Django instance에서 모든 Django application들의 이름을 활성화함. 앱들은 여러개의 프로젝트에서 사용될 수 있고 다른 프로젝트에서 사용하기 위해서 앱들을 package하거나 분리할 수 있음.</p>
+</li>
+<li>
+<p>default로 <a href="https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-INSTALLED_APPS"><code>INSTALLED_APPS</code></a> 다음 앱을 포함 (TODO: 들여다보기):</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#module-django.contrib.admin"><code>django.contrib.admin</code></a> – The admin site. You’ll use it shortly.</li>
+<li><a href="https://docs.djangoproject.com/en/4.0/topics/auth/#module-django.contrib.auth"><code>django.contrib.auth</code></a> – An authentication system.</li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/contrib/contenttypes/#module-django.contrib.contenttypes"><code>django.contrib.contenttypes</code></a> – A framework for content types.</li>
+<li><a href="https://docs.djangoproject.com/en/4.0/topics/http/sessions/#module-django.contrib.sessions"><code>django.contrib.sessions</code></a> – A session framework.</li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/contrib/messages/#module-django.contrib.messages"><code>django.contrib.messages</code></a> – A messaging framework.</li>
+<li><a href="https://docs.djangoproject.com/en/4.0/ref/contrib/staticfiles/#module-django.contrib.staticfiles"><code>django.contrib.staticfiles</code></a> – A framework for managing static files.</li>
+</ul>
+</li>
+<li>
+<p>위 application들은 보통의 경우 편리함을 위해 default로 포함됨.</p>
+</li>
+<li>
+<p>이런 응용 프로그램 중 일부는 최소한 하나의 데이터베이스 테이블을 사용하므로 사용전 DB에 테이블을 생성해야함. 생성을 위해 다음 명령어를 실행.
+<code>python manage.py migrate</code></p>
+</li>
+<li>
+<p>migrate 명령은 <code>INSATLL_APPS</code> 설정을 살펴보고 mysite/settings.py 파일의 DB 설정과 앱과 함께 제공되는 DB 마이그레이션에 따라 필요한 DB 테이블을 생성. (추후에 다룸.)</p>
+</li>
+<li>
+<p><code>\dt</code> (PostgreSQL) 실행시 Django 가 생성한 테이블 표시함.</p>
+</li>
+</ul>
+<hr />
+<p><strong>최소주의자(minimalists)들을 위하여.</strong></p>
+<p>기본으로 제공되는 어플리케이션은 일반적인 상황을 염두에 두었으나, 모두에게 필요한 것은 아님. 필요 없다고 생각 되면, <code>migrate</code> 실항 전, <code>INSTALLED_APPS</code>에서 제거할 애플리케이션들을 주석처리(comment-out) 하거나 삭제 하면 됨. <code>migrate</code> 명령은 <code>INSTALLED_APPS</code>에 등록된 어플리케이션에 한해서 실행됨.</p>
+<hr />
+<h2 id="creating-models"><a class="header" href="#creating-models"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#creating-models">Creating models</a></a></h2>
+<p>모델이란, 메타데이터를 가진 DB의 구조를 말함.</p>
+<p><strong>철학</strong></p>
+<p>모델은 데이터에 대한 정보의 단일하고 선언적인 자원. 저장 중인 데이터의 필수 필드와 동작이 포함됨. Django는 DRY 원칙을 따름. 목표는 한 곳에서 데이터 모델을 정의하고, 자동으로 데이터 모델로부터 파생(derive, 문맥상 모델을 생성한다는 의미처럼 보임)시키는 것.</p>
+<p>여기에는 migration이 포함됨. 예를 들어 Ruby On Rails 와 달리 migration은 모두 모델 파일에서 파생되며, 기본적으로 Django가 데이터베이스 스키마를 현재의 모델에 도달할 수 있게 해주는 기록.</p>
+<h3 id="pollsmodelspy-에-아래-모델-추가"><a class="header" href="#pollsmodelspy-에-아래-모델-추가"><code>polls/models.py</code> 에 아래 모델 추가</a></h3>
+<pre><code class="language-python">from django.db import models
+
+class Question(models.Model):
+  question_text = models.CharField(max_length=200)
+  pub_date = models.DateTimeField('date published')
+
+class Choice(models.Model):
+  question = models.ForeignKey(Question, on_delete=models.CASCADE)
+  choice_text= models.CharField(max_length=200)
+  vote = models.IntegerField(default=0)
+</code></pre>
+<ul>
+<li>
+<p>각 모델은 <code>django.db.models.Model</code>의 하위 클래스로 표현됨. 모델마다 여러 클래스 변수가 있으며, 각 클래스 변수는 모델에서 데이터베이스 필드를 나타냄.</p>
+</li>
+<li>
+<p>DB의 각 필드는 <code>Field</code>클래스의 인스턴스로 표현됨. 각 필드가 어떤 자료형을 가질 수 있는지 Django에게 전달함.</p>
+<ul>
+<li><code>CharField</code>: 문자(character) 필드</li>
+<li><code>DateTimeField</code>: 날짜와 시간(datetime)</li>
+</ul>
+</li>
+<li>
+<p>각각의 <code>Field</code> 인스턴스의 이름(<code>question_text</code> 또는 <code>pub_date</code>)은 기계가 읽기 좋은(machine-friendly format) 형식의 DB 필드 이름. 이 필드명을 Python 코드에서 사용할 수 있으며, DB에서는 컬럼명으로 사용.</p>
+</li>
+<li>
+<p>몇몇 <code>Field</code> 클래스들은 필수 인수가 필요함. <code>CharField</code>의 경우 <code>max_length</code>가 필수. 스키마에서만 필요한 것이 아니라 값을 검증할 때에도 쓰이는데 곧 보게 될 것.</p>
+</li>
+<li>
+<p><code>Field</code>는 다양한 선택적 인수들을 가질 수 있음.</p>
+</li>
+<li>
+<p><code>ForeignKey</code>를 사용한 관계 설정. 이 예제에서는 각각의 Choice</p>
+</li>
+<li>
+<p><code>ForeignKey</code>를 사용한 관계 설정. 이 예제에서는 각각의 <strong>Choice</strong> 가 하나의 <strong>Question</strong>에 관계된다는 것을 Django에게 알려줌. Django는 다대일(many-to-on), 다대다(many-to-many), 일대일(one-to-one)과 같은 모든 일반 DB관계들을 지원함.</p>
+</li>
+</ul>
+<h2 id="activating-models"><a class="header" href="#activating-models"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#activating-models">Activating models</a></a></h2>
+<p>Django가 모델 정보를 가지고 할 수 있는 일.</p>
+<ul>
+<li>이 앱을 위한 DB schzema 생성 (CREATE TABLE 문)</li>
+<li><strong>Qustion</strong>과 <strong>Choice</strong> 객체에 접근하기 위한 Python DB 접근 API를 생성</li>
+</ul>
+<hr />
+<p>철학</p>
+<p>Django 앱들은 꼈다뺐다 할 수 있음. 앱을 다수의 프로젝트에서 사용 가능하며 앱을 배포할 수도 있음. 특정 Django 사이트에 앱이 묶여있지 않아도 됨.</p>
+<hr />
+<ul>
+<li>앱을 현재 프로젝트에 포함시키려면 앱의 구성 클래스에 대한 참조를 <code>INSTALLED_APPS</code> 설정에 추가해야 함. <code>PollsConfig</code> 클래스는 <code>polls/apps.py</code> 파일 내에 존재. 즉, <code>polls.apps.PollsConfig</code>.</li>
+</ul>
+<pre><code class="language-python"># mysite/settings.py
+
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+</code></pre>
+<p>Django는 polls 앱이 포함 된 것을 알게됨.
+다음 명령 실행.</p>
+<p><code>python manage.py makemigrations polls</code></p>
+<p>실행 결과</p>
+<pre><code>Migrations for 'polls':
+  polls/migrations/0001_initial.py
+    - Create model Question
+    - Create model Choice
+</code></pre>
+<ul>
+<li>
+<p><code>makemigrations</code>을 실행시킴으로서, 모델을 변경시킨 사실과 이 변경사항을 migration으로 저장시키고 싶다는 것을 Django에게 알려줌.</p>
+</li>
+<li>
+<p>Migration은 Django가 모델(즉, DB 스키마)의 변경사항을 디스크에 저장하는 방법. Django가 mirgarion을 만들 때마다 읽진 않겠지만, Django의 변경점을 수동으로 수정할 수 있게 설계함.</p>
+</li>
+<li>
+<p>migration을 실행하고 DB 스키마를 관리해주는 migrate 명령어 실행. sqlmigrate 명령은 migration 이름을 인수로 받아, 실행하는 SQL 문장을 보여줌.</p>
+</li>
+</ul>
+<p><code>python manage.py sqlmigrate polls 0001</code></p>
+<p>실행 결과</p>
+<pre><code class="language-SQL">BEGIN;
+--
+-- Create model Question
+--
+CREATE TABLE &quot;polls_question&quot; (
+    &quot;id&quot; serial NOT NULL PRIMARY KEY,
+    &quot;question_text&quot; varchar(200) NOT NULL,
+    &quot;pub_date&quot; timestamp with time zone NOT NULL
+);
+--
+-- Create model Choice
+--
+CREATE TABLE &quot;polls_choice&quot; (
+    &quot;id&quot; serial NOT NULL PRIMARY KEY,
+    &quot;choice_text&quot; varchar(200) NOT NULL,
+    &quot;votes&quot; integer NOT NULL,
+    &quot;question_id&quot; integer NOT NULL
+);
+ALTER TABLE &quot;polls_choice&quot;
+  ADD CONSTRAINT &quot;polls_choice_question_id_c5b4b260_fk_polls_question_id&quot;
+    FOREIGN KEY (&quot;question_id&quot;)
+    REFERENCES &quot;polls_question&quot; (&quot;id&quot;)
+    DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX &quot;polls_choice_question_id_c5b4b260&quot; ON &quot;polls_choice&quot; (&quot;question_id&quot;);
+
+COMMIT;
+</code></pre>
+<ul>
+<li>사용 DB에 따라 출력결과 달라질 수 있으며, 위 출력결과는 PostgreSQL이 생성.</li>
+<li>테이블 이름은 app(polls)과 모델의 소문자 이름이 결합해서 자동으로 생성됨. (아 동작을 override 가능.)</li>
+<li>Primary keys (IDs)는 자동으로 추가됨. (override 가능.)</li>
+<li>컨벤션으로, Django는 &quot;_id&quot;를 외래키 필드명에 붙임. (override 가능.)</li>
+<li>외래키 관계는 FOREIGN KEY 라는 제약에 의해 명시.</li>
+</ul>
+<h2 id="playing-with-the-api"><a class="header" href="#playing-with-the-api"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#playing-with-the-api">Playing with the API</a></a></h2>
+<p>문서 참고</p>
+<h2 id="introducing-the-django-admin"><a class="header" href="#introducing-the-django-admin"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin">Introducing the Django Admin</a></a></h2>
+<h3 id="admin-유저-생성"><a class="header" href="#admin-유저-생성">admin 유저 생성</a></h3>
+<pre><code class="language-python">python manage.py createsuperuser
+
+Username: admin
+
+Email address: admin@example.com
+
+# 비밀번호 만들 때, 8자리 이상 + 너무 쉽지 않게 (예: 12345678 경고 문구 뜸.)
+Password: ********
+Password (again): ********
+Superuser created successfully.
+</code></pre>
+<h3 id="개발-서버-실행"><a class="header" href="#개발-서버-실행"><a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#start-the-development-server">개발 서버 실행</a></a></h3>
+<p>이미지와 함께 확인하기 위해서 이하 내용은 공식 문서 참고.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../django/01_requests_and_responses.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../https://github.com/dmydms/study/commit/6392e4ae47e2e1e032e96fd7439b2dc85786d658.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../django/01_requests_and_responses.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../https://github.com/dmydms/study/commit/6392e4ae47e2e1e032e96fd7439b2dc85786d658.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

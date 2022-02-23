@@ -2,5 +2,5 @@
 authors = ["dmydms"]
 language = "ko"
 multilingual = false
-src = "github.com/dmydms"
+src = "dmydms.github.io"
 title = "Dahyun's dev blog 🛠"
